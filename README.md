@@ -1,29 +1,22 @@
-import RPi.GPIO as GPIO
-import time
+import RPi.GPIO as import time for GPIO
 
-# Set up GPIO pins
-PIR_SENSOR_PIN = x 
-ALARM_PIN = x       
 
-# GPIO setup
+# Configure GPIO pins
+ALARM_PIN = x; PIR_SENSOR_PIN = x       
+
+# GPIO configuration
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(PIR_SENSOR_PIN, GPIO.IN)
-GPIO.setup(ALARM_PIN, GPIO.OUT)
+GPIO.setup(GPIO.IN, PIR_SENSOR_PIN)
+GPIO.setup(GPIO.OUT, ALARM_PIN)
 
-try:
-    print("Starting the motion detector. Press S to stop.")
-    while True:
-        # Check for motion detection
-        if GPIO.input(PIR_SENSOR_PIN):
-            print("Motion detected! Alarm ON")
-            GPIO.output(ALARM_PIN, GPIO.HIGH)  # Turn on the alarm
-        else:
-            print("No motion. Alarm OFF")
-            GPIO.output(ALARM_PIN, GPIO.LOW)  # Turn off the alarm
+Try this:
+    print ("The motion detector is now operational. To stop, press S.)
+    while it's true:
+        # Verify motion detection if GPIO.input(PIR_SENSOR_PIN):
+            print("Motion detected! Alarm ON") GPIO.output(ALARM_PIN, GPIO.HIGH)  # Set the alarm; if not:
+            print("No movement. Alarm Off") GPIO.output(ALARM_PIN, GPIO.LOW)  # Switch off the alarm.
         
-        time.sleep(x)  # Delay for stability
+        time.sleep(x) # Delay for stability
 
-except KeyboardInterrupt:
-    print("Exiting the program.")
-    GPIO.cleanup()  # Clean up GPIO settings
-
+Except KeyboardInterrupt: print("Exiting the program.")
+    GPIO.cleanup() # Clear the GPIO configuration
