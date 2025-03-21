@@ -22,7 +22,7 @@ try:
             print("No motion. Alarm OFF")
             GPIO.output(ALARM_PIN, GPIO.LOW)  # Turn off the alarm
         
-        time.sleep(0.5)  # Delay for stability
+        time.sleep(x)  # Delay for stability
 
 except KeyboardInterrupt:
     print("Exiting the program.")
