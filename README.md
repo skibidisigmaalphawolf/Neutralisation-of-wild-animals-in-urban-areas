@@ -11,7 +11,7 @@ GPIO.setup(GPIO.OUT, ALARM_PIN)
 
 Try this:
     print ("The motion detector is now operational. To stop, press S.)
-    while it's true:
+    if true:
         # Verify motion detection if GPIO.input(PIR_SENSOR_PIN):
             print("Motion detected! Alarm ON") GPIO.output(ALARM_PIN, GPIO.HIGH)  # Set the alarm; if not:
             print("No movement. Alarm Off") GPIO.output(ALARM_PIN, GPIO.LOW)  # Switch off the alarm.
