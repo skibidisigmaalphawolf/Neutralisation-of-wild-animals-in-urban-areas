@@ -1,4 +1,3 @@
-# Neutralisation-of-wild-animals-in-urban-areas
 import RPi.GPIO as GPIO
 import time
 
